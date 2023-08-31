@@ -1,20 +1,21 @@
-import vaca from '../../assets/vaca.jpg';
 import { Link } from 'react-router-dom';
 
 
-export function Card({ username }){
+export function Card({username, description, image, route }){
     return(
-        <Link to={'/profile/${username}'}> 
+        <a href={route}>
           <div className='card-in-cpn'>
             <div className='details'>
-                <img src={vaca} alt="" />
+                <img src={image} alt="avatar"/>
+                <div className="tx-card">
+                  <p>{username}</p>
+                  <p>{description}</p>
+                  
+                </div>
+               
             </div>
-            <div>
-                <p>username</p>
-                <p>bio</p>
-            </div>
-            <span className="material-symbols-outlined">chevron_right</span>
+            <span className="material-symbols-outlined">chevron_right</span> 
           </div>
-        </Link>
+        </a>
     );
 }
