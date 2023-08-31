@@ -1,6 +1,3 @@
-import { Link } from 'react-router-dom';
-
-
 export function Card({username, description, image, route }){
     return(
         <a href={route}>
